@@ -12,13 +12,13 @@ You can install this package either with `npm` or with `bower`.
 ### npm
 
 ```shell
-npm install mw-error-messages --save
+npm install mw-alert --save
 ```
 
 ### bower
 
 ```shell
-bower install mw-error-messages
+bower install mw-alert
 ```
 
 ## Usage

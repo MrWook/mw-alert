@@ -1,0 +1,181 @@
+/**
+ * @version v1.0.0
+ * @link https://github.com/MrWook/mw-alert
+ * @license MIT
+ * Copyright (c) 2018 MrWook
+ */
+.mw-alert {
+  position: absolute;
+  z-index: 2000;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid transparent;
+  padding: 10px 15px;
+  font-size: 20px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between; }
+
+@media (min-width: 576px) {
+  .mw-alert {
+    width: 80%; } }
+
+@media (min-width: 768px) {
+  .mw-alert {
+    width: 70%; } }
+
+@media (min-width: 992px) {
+  .mw-alert {
+    width: 60%; } }
+
+@media (min-width: 1200px) {
+  .mw-alert {
+    width: 50%; } }
+
+.mw-alert button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  border: 0;
+  float: right;
+  opacity: .2;
+  color: inherit;
+  background: 0 0;
+  font-size: 30px;
+  font-weight: 700;
+  outline: none;
+  padding: 0 0 0 15px; }
+
+.mw-alert button:focus {
+  outline: none; }
+
+.mw-alert-text {
+  word-break: break-all; }
+
+/*
+ *	add hover effect
+ */
+.mw-alert button:hover {
+  text-shadow: 0 1px #000000; }
+
+/*
+ *	add color
+ */
+.mw-alert.alert-success {
+  background-color: #D4EDDA;
+  color: #155724;
+  border-color: #C3E6CB; }
+
+.mw-alert.alert-warning {
+  background-color: #FFF3CD;
+  color: #856404;
+  border-color: #FFEEBA; }
+
+.mw-alert.alert-danger {
+  background-color: #F8D7DA;
+  color: #721C24;
+  border-color: #F5C6CB; }
+
+.mw-alert.alert-info {
+  background-color: #D1ECF1;
+  color: #0C5460;
+  border-color: #BEE5EB; }
+
+/*
+ *	Add animation effect
+ */
+.mw-alert.ng-enter {
+  -webkit-animation: AlertIn 0.35s both ease-out;
+  -moz-animation: AlertIn 0.35s both ease-out;
+  -ms-animation: AlertIn 0.35s both ease-out;
+  -o-animation: AlertIn 0.35s both ease-out;
+  animation: AlertIn 0.35s both ease-out; }
+
+.mw-alert.ng-leave {
+  -webkit-animation: AlertOut 0.35s both ease-in;
+  -moz-animation: AlertOut 0.35s both ease-in;
+  -ms-animation: AlertOut 0.35s both ease-in;
+  -o-animation: AlertOut 0.35s both ease-in;
+  animation: AlertOut 0.35s both ease-in; }
+
+@-webkit-keyframes AlertIn {
+  from {
+    margin-top: -100%; }
+  to {
+    margin-top: 0; } }
+
+@-moz-keyframes AlertIn {
+  from {
+    margin-top: -100%; }
+  to {
+    margin-top: 0; } }
+
+@-ms-keyframes AlertIn {
+  from {
+    margin-top: -100%; }
+  to {
+    margin-top: 0; } }
+
+@-o-keyframes AlertIn {
+  from {
+    margin-top: -100%; }
+  to {
+    margin-top: 0; } }
+
+@keyframes AlertIn {
+  from {
+    margin-top: -100%; }
+  to {
+    margin-top: 0; } }
+
+@-webkit-keyframes AlertOut {
+  from {
+    margin-top: 0; }
+  to {
+    margin-top: -100%; } }
+
+@-moz-keyframes AlertOut {
+  from {
+    margin-top: 0; }
+  to {
+    margin-top: -100%; } }
+
+@-ms-keyframes AlertOut {
+  from {
+    margin-top: 0; }
+  to {
+    margin-top: -100%; } }
+
+@-o-keyframes AlertOut {
+  from {
+    margin-top: 0; }
+  to {
+    margin-top: -100%; } }
+
+@keyframes AlertOut {
+  from {
+    margin-top: 0; }
+  to {
+    margin-top: -100%; } }
+
+/*# sourceMappingURL=mw-alert.css.map */

@@ -1,0 +1,1 @@
+angular.module('mw-alert', ['mw-alert-template']);

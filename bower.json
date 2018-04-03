@@ -1,0 +1,19 @@
+{
+	"name":        "mw-alert",
+	"version":     "1.0.0",
+	"description": "AngularJS module that provide contextual feedback messages for typical user actions.",
+	"main":        "index.js",
+	"dependencies":{
+		"angular":        "^1.6.9",
+		"angular-animate":"^1.6.9"
+	},
+	"license":     "MIT",
+	"homepage":    "",
+	"ignore":      [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}

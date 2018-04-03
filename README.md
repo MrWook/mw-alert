@@ -55,7 +55,7 @@ templateUrl           	| string    | mw-alert.html 		| set the template URL
 
 ## Demo
 
-<a href='#' target='_blank'>View demo on Plunker</a>
+<a href='https://plnkr.co/edit/7vnvxYQuE05yQO21XYbL?p=preview' target='_blank'>View demo on Plunker</a>
 
 
 ## Tasklist 

@@ -4,6 +4,7 @@
 	"description":    "AngularJS module that provide contextual feedback messages for typical user actions.",
 	"author":         "MrWook",
 	"license":        "MIT",
+	"homepage":       "https://github.com/MrWook/mw-alert",
 	"dependencies":   {
 		"angular":"^1.6.9"
 	},

@@ -1,5 +1,5 @@
 /**
- * @version v1.0.0
+ * @version v1.0.1
  * @link https://github.com/MrWook/mw-alert
  * @license MIT
  * Copyright (c) 2018 MrWook
@@ -28,17 +28,6 @@ angular.module('mw-alert').directive('mwAlert', ['$timeout', 'mwAlertService', '
 			//listen for open event and set message
 			$scope.$on('mw-alert-opened', function (event, message) {
 				$scope.message = message;
-				//check if auto close is active
-				if (message.close_auto !== undefined && message.close_auto == true || message.close_auto === undefined && mwAlertConfig.close_auto) {
-					var timeout = mwAlertConfig.timeout;
-					//check if timeout is set and is a number
-					if (message.timeout !== undefined && typeof data === 'number' && data % 1 === 0) {
-						timeout = message.timeout;
-					}
-					$timeout(function () {
-						$scope.close();
-					}, timeout);
-				}
 			});
 		}],
 		restrict: 'E',
@@ -71,7 +60,7 @@ angular.module('mw-alert').service('mwAlertService', ['$rootScope', '$document',
 	}, 0);
 
 	var message = void 0;
-
+	var debounce = null;
 	//set new alert
 	var open = function open(msg) {
 		//message need to be an object and has the properties text and type
@@ -80,12 +69,28 @@ angular.module('mw-alert').service('mwAlertService', ['$rootScope', '$document',
 				//destroy reference with angular.copy
 				message = angular.copy(msg);
 				$rootScope.$broadcast('mw-alert-opened', message);
+				//check if auto close is active
+				if (message.close_auto !== undefined && message.close_auto == true || message.close_auto === undefined && mwAlertConfig.close_auto) {
+					var timeout = mwAlertConfig.timeout;
+					//check if timeout is set and is a number
+					if (message.timeout !== undefined && typeof data === 'number' && data % 1 === 0) {
+						timeout = message.timeout;
+					}
+
+					if (debounce !== null) {
+						$timeout.cancel(debounce);
+					}
+					debounce = $timeout(function () {
+						close();
+						debounce = null;
+					}, timeout).catch(function () {});
+				}
 			} else {
-				//throw exception missing properties
+				throw new Error("The message for mw-alert need to have the properties 'type' and 'text'");
 			}
 		} else {
-				//throw exception is not an object
-			}
+			throw new Error("The message for mw-alert need to be an object.");
+		}
 	};
 
 	//close the alert box

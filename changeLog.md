@@ -1,3 +1,7 @@
+## version 1.0.3
+
+* fix uglify bug
+
 ## version 1.0.1
 
 * change some color for better material design

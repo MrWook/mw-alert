@@ -1,5 +1,5 @@
 /**
- * @version v1.0.1
+ * @version v1.0.3
  * @link https://github.com/MrWook/mw-alert
  * @license MIT
  * Copyright (c) 2018 MrWook
@@ -54,7 +54,7 @@ angular.module('mw-alert').service('mwAlertService', ['$rootScope', '$document',
 		//create new scope object for the compile directive
 		var $scope = $rootScope.$new();
 		parent.prepend($compile('<mw-alert></mw-alert>')($scope));
-		// // Finally, refresh the watch expressions in the new element
+		//the $timeout service call $digest by itself so its not necessary at this point
 		// $scope.$digest();
 	}, 0);
 

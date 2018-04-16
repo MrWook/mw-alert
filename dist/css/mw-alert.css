@@ -1,5 +1,5 @@
 /**
- * @version v1.0.1
+ * @version v1.0.3
  * @link https://github.com/MrWook/mw-alert
  * @license MIT
  * Copyright (c) 2018 MrWook

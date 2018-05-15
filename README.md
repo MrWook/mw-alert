@@ -1,6 +1,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MrWook/mw-alert/blob/master/LICENSE.txt)
 [![codebeat badge](https://codebeat.co/badges/f654ad77-40ea-4d5b-8046-e9254b0473b4)](https://codebeat.co/projects/github-com-mrwook-mw-alert-master)
 [![Dependency Status](https://www.versioneye.com/user/projects/5afac9fd0fb24f0e57e3d980/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5afac9fd0fb24f0e57e3d980)
+[![npm version](https://badge.fury.io/js/mw-alert.svg)](https://badge.fury.io/js/mw-alert)
 
 # mw-alert
 

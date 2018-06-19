@@ -1,3 +1,8 @@
+## version 1.0.4
+
+* move the insertion of the alert window on bootstrap to the run module.
+* standardize repository
+
 ## version 1.0.3
 
 * fix uglify bug

@@ -1,11 +1,10 @@
 /**
- * @version v1.0.3
- * @link https://github.com/MrWook/mw-alert
- * @license MIT
- * Copyright (c) 2018 MrWook
- */
-'use strict';
-(function(ng, undefined){
+* @version v1.0.4
+* @link https://github.com/MrWook/mw-alert
+* @license MIT
+* Copyright (c) 2018 MrWook
+*/(function(angular, undefined){
+ 'use strict';
 angular.module('mw-alert', ['mw-alert-template']);
 angular.module('mw-alert').constant('mwAlertConfig', {
 	parent_selector: 'body',
@@ -43,9 +42,7 @@ angular.module('mw-alert').directive('mwAlert', ['$timeout', 'mwAlertService', '
 	};
 }]);
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-angular.module('mw-alert').service('mwAlertService', ['$rootScope', '$document', '$compile', '$timeout', 'mwAlertConfig', function ($rootScope, $document, $compile, $timeout, mwAlertConfig) {
+angular.module('mw-alert').run(['$rootScope', '$document', '$compile', '$timeout', 'mwAlertConfig', function ($rootScope, $document, $compile, $timeout, mwAlertConfig) {
 	var parent_selector = mwAlertConfig.parent_selector;
 	//set the directive inside the parent selector, default is body
 	//I'm totally aware of the fact that you shouldn't use DOM manipulation outside of a directive but this is for a greater GOOD!
@@ -54,10 +51,12 @@ angular.module('mw-alert').service('mwAlertService', ['$rootScope', '$document',
 		//create new scope object for the compile directive
 		var $scope = $rootScope.$new();
 		parent.prepend($compile('<mw-alert></mw-alert>')($scope));
-		//the $timeout service call $digest by itself so its not necessary at this point
-		// $scope.$digest();
 	}, 0);
+}]);
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+angular.module('mw-alert').service('mwAlertService', ['$rootScope', '$timeout', 'mwAlertConfig', function ($rootScope, $timeout, mwAlertConfig) {
 	var message = void 0;
 	var debounce = null;
 	//set new alert
@@ -109,5 +108,5 @@ angular.module("mw-alert-template", []).run(["$templateCache", function($templat
 		"<div class=\"mw-alert\" ng-class=\"'alert-' + (message.type || 'warning')\" ng-if=\"message != undefined\"><div class=\"mw-alert-text\">{{message.text}}</div><button type=\"button\" class=\"mw-alert-close\" ng-click=\"close()\" aria-hidden=\"false\"><span aria-hidden=\"true\">×</span></button></div>");
 }]);
 
-})();
+})(angular);
 //# sourceMappingURL=mw-alert.js.map

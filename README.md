@@ -1,9 +1,14 @@
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/MrWook/mw-alert/blob/master/LICENSE.txt)
+[![codebeat badge](https://codebeat.co/badges/f654ad77-40ea-4d5b-8046-e9254b0473b4)](https://codebeat.co/projects/github-com-mrwook-mw-alert-master)
+[![dependencies Status](https://david-dm.org/MrWook/mw-alert/status.svg)](https://david-dm.org/MrWook/mw-alert)
+[![npm version](https://badge.fury.io/js/mw-alert.svg)](https://badge.fury.io/js/mw-alert)
+
 # mw-alert
 
 AngularJS module that provide contextual feedback messages for typical user actions.
 
 ## Requirements (tested in)
-- Angular (v1.6.9)
+- Angular (v1.7.2)
 
 ## Install
 

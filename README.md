@@ -3,6 +3,7 @@
 [![dependencies Status](https://david-dm.org/MrWook/mw-alert/status.svg)](https://david-dm.org/MrWook/mw-alert)
 [![npm version](https://badge.fury.io/js/mw-alert.svg)](https://badge.fury.io/js/mw-alert)
 
+# This repository is no longer maintained.
 # mw-alert
 
 AngularJS module that provide contextual feedback messages for typical user actions.
